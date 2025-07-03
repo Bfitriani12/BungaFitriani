@@ -24,6 +24,9 @@
             <input type="password" id="password" name="password" required>
             <button type="submit">Login</button>
         </form>
+        <form action="<?php echo site_url('signup'); ?>">
+            <button type="submit" class="home-btn">Sign Up</button>
+        </form>
         <form action="<?php echo site_url('welcome'); ?>">
             <button type="submit" class="home-btn">Home</button>
         </form>

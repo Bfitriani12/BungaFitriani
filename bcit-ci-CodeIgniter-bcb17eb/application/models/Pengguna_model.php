@@ -8,4 +8,12 @@ class Pengguna_model extends CI_Model {
         $query = $this->db->get('pengguna');
         return $query->row_array();
     }
+
+    public function insert($username, $password) {
+        $data = array(
+            'Nama' => $username,
+            'Password' => $password
+        );
+        return $this->db->insert('pengguna', $data);
+    }
 } 
