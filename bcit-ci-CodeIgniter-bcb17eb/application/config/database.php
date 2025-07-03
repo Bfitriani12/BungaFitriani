@@ -1,4 +1,4 @@
-<?php
+image.png<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
