@@ -272,6 +272,45 @@
                 </ul>
                 <div class="section-title">Catatan</div>
                 <div class="example-box">Idhar harus dibaca dengan jelas dan terang, tidak boleh ada dengung atau kesamaran. Bunyi nun harus keluar dari mulut dengan jelas. Kejelasan adalah ciri khas dari idhar.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'qalqalah'): ?>
+                <div class="tajwid-title">Qalqalah</div>
+                <div class="tajwid-desc">Qalqalah adalah hukum tajwid yang berarti "mengguncang" atau "memantul". Qalqalah terjadi ketika huruf qalqalah dalam keadaan sukun (mati) dibaca dengan suara yang memantul atau mengguncang. Huruf qalqalah adalah huruf-huruf yang memiliki sifat pantulan suara.</div>
+                <div class="section-title">Huruf Qalqalah</div>
+                <ul class="mad-list">
+                    <li>ق (Qaf)</li>
+                    <li>ط (Tha)</li>
+                    <li>ب (Ba)</li>
+                    <li>ج (Jim)</li>
+                    <li>د (Dal)</li>
+                </ul>
+                <div class="section-title">Jenis-Jenis Qalqalah</div>
+                <ul class="mad-list">
+                    <li><b>Qalqalah Kubra</b> (besar): terjadi ketika huruf qalqalah sukun berada di akhir kata dan dibaca waqaf (berhenti).<br>
+                        <span class="example-box">Contoh: أَحَدْ dibaca "ahad" dengan pantulan di akhir</span>
+                    </li>
+                    <li><b>Qalqalah Sugra</b> (kecil): terjadi ketika huruf qalqalah sukun berada di tengah kata.<br>
+                        <span class="example-box">Contoh: أَحْبَطَ dibaca "ahbata" dengan pantulan di tengah</span>
+                    </li>
+                </ul>
+                <div class="section-title">Cara Membaca Qalqalah</div>
+                <ul class="mad-list">
+                    <li>Huruf qalqalah sukun dibaca dengan suara yang memantul</li>
+                    <li>Suara harus keluar dengan jelas dan tegas</li>
+                    <li>Tidak boleh dibaca lemah atau samar</li>
+                    <li>Pantulan suara harus terasa di tenggorokan</li>
+                    <li>Qalqalah kubra lebih kuat pantulannya dari sugra</li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Qalqalah</div>
+                <ul class="mad-list">
+                    <li>أَحَدْ → dibaca "ahad" (qalqalah kubra)</li>
+                    <li>أَحْبَطَ → dibaca "ahbata" (qalqalah sugra)</li>
+                    <li>مَدْ → dibaca "mad" (qalqalah kubra)</li>
+                    <li>أَبْدَلَ → dibaca "abdala" (qalqalah sugra)</li>
+                    <li>قَدْ → dibaca "qad" (qalqalah kubra)</li>
+                    <li>أَقْبَلَ → dibaca "aqbala" (qalqalah sugra)</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Qalqalah harus dibaca dengan suara yang memantul dan tegas. Qalqalah kubra lebih kuat dari sugra. Pantulan suara adalah ciri khas dari qalqalah yang membedakannya dari huruf sukun biasa.</div>
             <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>
