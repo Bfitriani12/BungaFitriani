@@ -180,6 +180,29 @@
                 </ul>
                 <div class="section-title">Catatan</div>
                 <div class="example-box">Idgham harus dibaca dengan jelas, baik dengan atau tanpa dengung sesuai jenisnya. Perhatikan panjang dengung (ghunnah) jika idgham bighunnah.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'iqlab'): ?>
+                <div class="tajwid-title">Iqlab</div>
+                <div class="tajwid-desc">Iqlab adalah hukum tajwid yang berarti "membalikkan" atau "mengubah". Iqlab terjadi ketika nun sukun (نْ) atau tanwin (ــًــٍــٌ) bertemu dengan huruf ba (ب). Dalam hal ini, nun sukun atau tanwin dibaca menjadi mim sukun (مْ) dengan dengung (ghunnah).</div>
+                <div class="section-title">Huruf Iqlab</div>
+                <ul class="mad-list">
+                    <li>ب (Ba) - satu-satunya huruf yang menyebabkan iqlab</li>
+                </ul>
+                <div class="section-title">Cara Membaca Iqlab</div>
+                <ul class="mad-list">
+                    <li>Nun sukun (نْ) atau tanwin dibaca menjadi mim sukun (مْ)</li>
+                    <li>Dibaca dengan dengung (ghunnah) selama 2 harakat</li>
+                    <li>Bunyi mim harus jelas dari rongga hidung</li>
+                    <li>Kemudian dilanjutkan dengan huruf ba (ب)</li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Iqlab</div>
+                <ul class="mad-list">
+                    <li>مِنْ بَعْدِهِ → dibaca "mim-ba'dihi" (nun menjadi mim dengan dengung)</li>
+                    <li>سَمِيعٌ بَصِيرٌ → dibaca "sami'um-basiir" (tanwin menjadi mim dengan dengung)</li>
+                    <li>مَنْ بَعْدَ → dibaca "mam-ba'da" (nun menjadi mim dengan dengung)</li>
+                    <li>عَلِيمٌ بِذَاتِ الصُّدُورِ → dibaca "aliimun-bidzaatish-shuduuri"</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Iqlab hanya terjadi dengan huruf ba (ب). Dengung (ghunnah) harus dibaca dengan jelas dari rongga hidung, bukan dari mulut. Panjang dengung adalah 2 harakat.</div>
             <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>
