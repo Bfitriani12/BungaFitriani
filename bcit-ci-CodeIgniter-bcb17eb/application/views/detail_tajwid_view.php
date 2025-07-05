@@ -98,25 +98,59 @@
     <div class="header">Detail Materi Tajwid</div>
     <div class="container">
         <div class="card">
-            <div class="tajwid-title">Ghunnah</div>
-            <div class="tajwid-desc">Ghunnah adalah suara dengung yang keluar dari rongga hidung saat membaca huruf tertentu dalam Al-Qur'an. Ghunnah terjadi pada huruf <b>ن</b> (nun) dan <b>م</b> (mim) bertasydid, serta pada beberapa hukum tajwid seperti idgham, ikhfa, dan iqlab.</div>
-            <div class="section-title">Ciri-ciri Ghunnah</div>
-            <ul class="mad-list">
-                <li>Suara dengung terdengar jelas dari hidung</li>
-                <li>Biasanya berlangsung 2 harakat (dua ketukan)</li>
-                <li>Terjadi pada huruf <b>نّ</b> (nun tasydid) dan <b>مّ</b> (mim tasydid)</li>
-                <li>Juga muncul pada hukum Idgham Bighunnah, Ikhfa', dan Iqlab</li>
-            </ul>
-            <div class="section-title">Contoh Bacaan Ghunnah</div>
-            <ul class="mad-list">
-                <li><b>Idgham Bighunnah:</b> مَنْ يَقُولُ dibaca "manny-aquulu" (dengung pada "nny")</li>
-                <li><b>Ikhfa:</b> أَنْفُسِكُمْ dibaca "anfu..." (dengung pada "n")</li>
-                <li><b>Iqlab:</b> أَنْبَتَ dibaca "ambata" (dengung pada "m")</li>
-                <li><b>Nun/Mim Tasydid:</b> إِنَّ dibaca "inna" (dengung pada "nn")</li>
-                <li><b>سَمِيعٌ مَّبْصِيرٌ</b> (dengung pada "mm")</li>
-            </ul>
-            <div class="section-title">Catatan</div>
-            <div class="example-box">Ghunnah harus dibaca dengan jelas dan tidak dipercepat. Dengung dilakukan dari rongga hidung, bukan dari mulut.</div>
+            <?php if (isset($tajwid['slug']) && $tajwid['slug'] === 'mad'): ?>
+                <div class="tajwid-title">Bacaan Mad</div>
+                <div class="tajwid-desc">Mad adalah memanjangkan suara pada huruf hijaiyah tertentu karena sebab tertentu. Mad terjadi jika ada huruf mad (ا, و, ي) yang didahului harakat yang sesuai, atau karena bertemu hamzah/sukun. Panjang mad bisa 2, 4, atau 6 harakat tergantung jenisnya.</div>
+                <div class="section-title">Huruf Mad</div>
+                <ul class="mad-list">
+                    <li><b>Alif (ا)</b> didahului harakat fathah</li>
+                    <li><b>Waw (و)</b> didahului harakat dhammah</li>
+                    <li><b>Ya (ي)</b> didahului harakat kasrah</li>
+                </ul>
+                <div class="section-title">Jenis-Jenis Mad</div>
+                <ul class="mad-list">
+                    <li><b>Mad Thabi'i (Mad Asli)</b>: Mad dasar, dipanjangkan 2 harakat.<br>
+                        <span class="example-box">Contoh: قَالَ (qaala), قِيلَ (qiila), يَقُولُ (yaquulu)</span>
+                    </li>
+                    <li><b>Mad Wajib Muttashil</b>: Mad bertemu hamzah dalam satu kata, dipanjangkan 4-5 harakat.<br>
+                        <span class="example-box">Contoh: جَاءَ (jaa-a), سُوءٌ (suu-un)</span>
+                    </li>
+                    <li><b>Mad Jaiz Munfashil</b>: Mad bertemu hamzah di kata berbeda, dipanjangkan 4-5 harakat.<br>
+                        <span class="example-box">Contoh: فِي &nbsp; أَنْفُسِكُمْ (fii anfusikum)</span>
+                    </li>
+                    <li><b>Mad Aridh Lissukun</b>: Mad bertemu huruf sukun karena waqaf (berhenti), dipanjangkan 2, 4, atau 6 harakat.<br>
+                        <span class="example-box">Contoh: الْعَالَمِينَ (al-'aalamiin) saat waqaf</span>
+                    </li>
+                    <li><b>Mad Iwadh</b>: Mad pengganti tanwin fathah di akhir kalimat, dipanjangkan 2 harakat.<br>
+                        <span class="example-box">Contoh: هُدًى (hudan) dibaca huda</span>
+                    </li>
+                    <li><b>Mad Badal</b>: Mad yang didahului hamzah, dipanjangkan 2 harakat.<br>
+                        <span class="example-box">Contoh: آمَنَ (aamana), إِيمَانٍ (iimaanin)</span>
+                    </li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Panjang mad diukur dengan harakat (gerakan jari atau ketukan). Bacaan mad harus jelas, tidak dipercepat, dan sesuai kaidah tajwid.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'ghunnah'): ?>
+                <div class="tajwid-title">Ghunnah</div>
+                <div class="tajwid-desc">Ghunnah adalah suara dengung yang keluar dari rongga hidung saat membaca huruf tertentu dalam Al-Qur'an. Ghunnah terjadi pada huruf <b>ن</b> (nun) dan <b>م</b> (mim) bertasydid, serta pada beberapa hukum tajwid seperti idgham, ikhfa, dan iqlab.</div>
+                <div class="section-title">Ciri-ciri Ghunnah</div>
+                <ul class="mad-list">
+                    <li>Suara dengung terdengar jelas dari hidung</li>
+                    <li>Biasanya berlangsung 2 harakat (dua ketukan)</li>
+                    <li>Terjadi pada huruf <b>نّ</b> (nun tasydid) dan <b>مّ</b> (mim tasydid)</li>
+                    <li>Juga muncul pada hukum Idgham Bighunnah, Ikhfa', dan Iqlab</li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Ghunnah</div>
+                <ul class="mad-list">
+                    <li><b>Idgham Bighunnah:</b> مَنْ يَقُولُ dibaca "manny-aquulu" (dengung pada "nny")</li>
+                    <li><b>Ikhfa:</b> أَنْفُسِكُمْ dibaca "anfu..." (dengung pada "n")</li>
+                    <li><b>Iqlab:</b> أَنْبَتَ dibaca "ambata" (dengung pada "m")</li>
+                    <li><b>Nun/Mim Tasydid:</b> إِنَّ dibaca "inna" (dengung pada "nn")</li>
+                    <li><b>سَمِيعٌ مَّبْصِيرٌ</b> (dengung pada "mm")</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Ghunnah harus dibaca dengan jelas dan tidak dipercepat. Dengung dilakukan dari rongga hidung, bukan dari mulut.</div>
+            <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>
     </div>
