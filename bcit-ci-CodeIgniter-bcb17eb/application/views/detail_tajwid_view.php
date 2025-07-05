@@ -150,6 +150,36 @@
                 </ul>
                 <div class="section-title">Catatan</div>
                 <div class="example-box">Ghunnah harus dibaca dengan jelas dan tidak dipercepat. Dengung dilakukan dari rongga hidung, bukan dari mulut.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'idgham'): ?>
+                <div class="tajwid-title">Idgham</div>
+                <div class="tajwid-desc">Idgham adalah hukum tajwid yang berarti "meleburkan" atau "menggabungkan" satu huruf ke huruf berikutnya sehingga dibaca seolah-olah menjadi satu huruf. Dalam Al-Qur'an, idgham terjadi ketika nun sukun (نْ) atau tanwin (ــًــٍــٌ) bertemu dengan salah satu huruf idgham.</div>
+                <div class="section-title">Huruf Idgham</div>
+                <ul class="mad-list">
+                    <li>ي (Ya)</li>
+                    <li>ر (Ra)</li>
+                    <li>م (Mim)</li>
+                    <li>ل (Lam)</li>
+                    <li>و (Waw)</li>
+                    <li>ن (Nun)</li>
+                </ul>
+                <div class="section-title">Jenis-Jenis Idgham</div>
+                <ul class="mad-list">
+                    <li><b>Idgham Bighunnah</b> (dengan dengung): jika bertemu ي, ن, م, و. Dibaca dengan dengung (ghunnah) 2 harakat.<br>
+                        <span class="example-box">Contoh: مَنْ يَقُولُ dibaca "manny-aquulu"</span>
+                    </li>
+                    <li><b>Idgham Bilaghunnah</b> (tanpa dengung): jika bertemu ل, ر. Dibaca tanpa dengung.<br>
+                        <span class="example-box">Contoh: مِنْ رَبِّهِمْ dibaca "mir-rabbihim"</span>
+                    </li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Idgham</div>
+                <ul class="mad-list">
+                    <li>مَنْ يَعْمَلْ → dibaca "mayya'mal" (idgham bighunnah)</li>
+                    <li>مِنْ لَدُنْ → dibaca "mil-ladun" (idgham bilaghunnah)</li>
+                    <li>سَمِيعٌ نَصِيرٌ → dibaca "sami'un-nasiir" (idgham bighunnah)</li>
+                    <li>مِنْ رَبِّهِمْ → dibaca "mir-rabbihim" (idgham bilaghunnah)</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Idgham harus dibaca dengan jelas, baik dengan atau tanpa dengung sesuai jenisnya. Perhatikan panjang dengung (ghunnah) jika idgham bighunnah.</div>
             <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>

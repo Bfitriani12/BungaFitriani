@@ -201,6 +201,21 @@
                 <div class="stat-number" style="color: white;">Fathah</div>
                 <div class="stat-label" style="color: rgba(255,255,255,0.8);">Mulai Belajar</div>
             </div>
+            <div class="stat-card" style="cursor: pointer; background: linear-gradient(135deg, #38bdf8, #2563eb); color: white;" onclick="window.location.href='<?php echo site_url('kasroh'); ?>'">
+                <div class="stat-icon" style="color: white;"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-number" style="color: white;">Kasroh</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.8);">Mulai Belajar</div>
+            </div>
+            <div class="stat-card" style="cursor: pointer; background: linear-gradient(135deg, #fbbf24, #f59e42); color: white;" onclick="window.location.href='<?php echo site_url('dhomah'); ?>'">
+                <div class="stat-icon" style="color: white;"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-number" style="color: white;">Dhomah</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.8);">Mulai Belajar</div>
+            </div>
+            <div class="stat-card" style="cursor: pointer; background: linear-gradient(135deg, #fdba74, #fbbf24); color: white;" onclick="window.location.href='<?php echo site_url('tanwinfathah'); ?>'">
+                <div class="stat-icon" style="color: white;"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-number" style="color: white;">Tanwin Fathah</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.8);">Mulai Belajar</div>
+            </div>
         </div>
         <div class="content">
             <form class="input-form">

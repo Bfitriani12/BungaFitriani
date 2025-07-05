@@ -11,4 +11,4 @@ class Huruf extends CI_Controller {
         $data['huruf'] = $this->Huruf_model->get_all();
         $this->load->view('huruf_view', $data);
     }
-} 
+}
