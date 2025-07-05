@@ -16,4 +16,8 @@ class Pengguna_model extends CI_Model {
         );
         return $this->db->insert('pengguna', $data);
     }
+
+    public function count_all() {
+        return $this->db->count_all('pengguna');
+    }
 } 

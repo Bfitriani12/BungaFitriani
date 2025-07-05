@@ -170,14 +170,14 @@
 <body>
     <div class="header">Input Huruf Hijaiyah</div>
     <div class="tabs">
-        <div class="tab active">Beranda</div>
-        <div class="tab">Fathah</div>
-        <div class="tab">Kasroh</div>
-        <div class="tab">Dhomah</div>
-        <div class="tab">Tanwin Fathah</div>
-        <div class="tab">Tanwin Dhomah</div>
-        <div class="tab">Tanwin Kasroh</div>
-        <div class="tab">Tajwid</div>
+        <div class="tab active" data-tab="beranda">Beranda</div>
+        <div class="tab" data-tab="fathah" onclick="window.location.href='<?php echo site_url('fathah'); ?>'">Fathah</div>
+        <div class="tab" data-tab="kasroh" onclick="window.location.href='<?php echo site_url('kasroh'); ?>'">Kasroh</div>
+        <div class="tab" data-tab="dhomah" onclick="window.location.href='<?php echo site_url('dhomah'); ?>'">Dhomah</div>
+        <div class="tab" data-tab="tanwin-fathah" onclick="window.location.href='<?php echo site_url('tanwinfathah'); ?>'">Tanwin Fathah</div>
+        <div class="tab" data-tab="tanwin-dhomah" onclick="window.location.href='<?php echo site_url('tanwindhomah'); ?>'">Tanwin Dhomah</div>
+        <div class="tab" data-tab="tanwin-kasroh" onclick="window.location.href='<?php echo site_url('tanwinkasroh'); ?>'">Tanwin Kasroh</div>
+        <div class="tab" data-tab="tajwid" onclick="window.location.href='<?php echo site_url('tajwid'); ?>'">Tajwid</div>
     </div>
     <div class="main">
         <div class="sidebar">
@@ -195,6 +195,11 @@
                 <div class="stat-icon"><i class="fa-solid fa-book"></i></div>
                 <div class="stat-number">5</div>
                 <div class="stat-label">Materi</div>
+            </div>
+            <div class="stat-card" style="cursor: pointer; background: linear-gradient(135deg, #667eea, #764ba2); color: white;" onclick="window.location.href='<?php echo site_url('fathah'); ?>'">
+                <div class="stat-icon" style="color: white;"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-number" style="color: white;">Fathah</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.8);">Mulai Belajar</div>
             </div>
         </div>
         <div class="content">
@@ -215,5 +220,62 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Handle tab-specific actions
+                const tabType = this.getAttribute('data-tab');
+                if (tabType === 'fathah') {
+                    // The onclick will handle the redirect
+                    return;
+                }
+                
+                // For other tabs, you can add specific functionality here
+                console.log('Tab clicked:', tabType);
+            });
+        });
+        
+        // Add hover effects for better UX
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.background = '#8b5cf6';
+                    this.style.color = '#fff';
+                }
+            });
+            
+            tab.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.background = '#fff';
+                    this.style.color = '#7c2ae8';
+                }
+            });
+        });
+        
+        // Search functionality
+        document.querySelector('.input-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.getElementById('cari').value.toLowerCase();
+            const hurufCards = document.querySelectorAll('.huruf-card');
+            
+            hurufCards.forEach(card => {
+                const hurufText = card.querySelector('.huruf-utama').textContent.toLowerCase();
+                const latinText = card.querySelector('.huruf-latin').textContent.toLowerCase();
+                
+                if (hurufText.includes(searchTerm) || latinText.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
