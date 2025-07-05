@@ -241,6 +241,37 @@
                 </ul>
                 <div class="section-title">Catatan</div>
                 <div class="example-box">Ikhfa harus dibaca dengan samar-samar, tidak boleh jelas seperti nun atau mim. Dengung (ghunnah) harus keluar dari rongga hidung selama 2 harakat. Kesamaran adalah ciri khas dari ikhfa.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'idhar'): ?>
+                <div class="tajwid-title">Idhar</div>
+                <div class="tajwid-desc">Idhar adalah hukum tajwid yang berarti "jelas" atau "terang". Idhar terjadi ketika nun sukun (نْ) atau tanwin (ــًــٍــٌ) bertemu dengan huruf-huruf idhar. Dalam hal ini, nun sukun atau tanwin dibaca dengan jelas tanpa dengung (ghunnah).</div>
+                <div class="section-title">Huruf Idhar</div>
+                <ul class="mad-list">
+                    <li>ا (Alif)</li>
+                    <li>ه (Ha)</li>
+                    <li>ع (Ain)</li>
+                    <li>ح (Ha)</li>
+                    <li>غ (Ghain)</li>
+                    <li>خ (Kha)</li>
+                </ul>
+                <div class="section-title">Cara Membaca Idhar</div>
+                <ul class="mad-list">
+                    <li>Nun sukun (نْ) atau tanwin dibaca dengan jelas</li>
+                    <li>Tidak ada dengung (ghunnah)</li>
+                    <li>Bunyi nun harus keluar dari mulut, bukan dari hidung</li>
+                    <li>Harus dibaca terang dan jelas</li>
+                    <li>Tidak boleh ada kesamaran dalam pengucapan</li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Idhar</div>
+                <ul class="mad-list">
+                    <li>مِنْ أَهْلِهِ → dibaca "min-ahlihi" (nun dibaca jelas)</li>
+                    <li>سَمِيعٌ أَلِيمٌ → dibaca "sami'un-aliim" (tanwin dibaca jelas)</li>
+                    <li>مِنْ عِلْمِهِ → dibaca "min-ilmihi" (nun dibaca jelas)</li>
+                    <li>عَلِيمٌ حَكِيمٌ → dibaca "aliimun-hakiim" (tanwin dibaca jelas)</li>
+                    <li>مِنْ حَيْثُ → dibaca "min-haytsu" (nun dibaca jelas)</li>
+                    <li>مِنْ غَيْرِهِ → dibaca "min-ghayrihi" (nun dibaca jelas)</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Idhar harus dibaca dengan jelas dan terang, tidak boleh ada dengung atau kesamaran. Bunyi nun harus keluar dari mulut dengan jelas. Kejelasan adalah ciri khas dari idhar.</div>
             <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>
