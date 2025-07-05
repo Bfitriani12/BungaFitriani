@@ -58,3 +58,5 @@ $route['tanwinfathah'] = 'Tanwinfathah';
 $route['tanwinfathah/(:any)'] = 'Tanwinfathah/$1';
 $route['tanwindhomah'] = 'Tanwindhomah';
 $route['tanwindhomah/(:any)'] = 'Tanwindhomah/$1';
+$route['tanwinkasroh'] = 'Tanwinkasroh';
+$route['tanwinkasroh/(:any)'] = 'Tanwinkasroh/$1';
