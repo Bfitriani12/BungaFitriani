@@ -13,8 +13,6 @@ CREATE TABLE huruf_hijaiyah (
     Hh_id INT(11) AUTO_INCREMENT PRIMARY KEY,
     Huruf_1 VARCHAR(10),
     Huruf_2 VARCHAR(35),
-    H_sound VARCHAR(50),
-    H_cbg VARCHAR(15),
     H_text TEXT,
     Tgl_input DATE,
     Deskripsi MEDIUMTEXT
