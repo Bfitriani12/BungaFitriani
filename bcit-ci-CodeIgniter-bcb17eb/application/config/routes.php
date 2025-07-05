@@ -54,3 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['fathah/detail/(:any)'] = 'fathah/detail/$1';
 $route['admin'] = 'admin';
+$route['tanwinfathah'] = 'Tanwinfathah';
+$route['tanwinfathah/(:any)'] = 'Tanwinfathah/$1';
+$route['tanwindhomah'] = 'Tanwindhomah';
+$route['tanwindhomah/(:any)'] = 'Tanwindhomah/$1';
