@@ -203,6 +203,44 @@
                 </ul>
                 <div class="section-title">Catatan</div>
                 <div class="example-box">Iqlab hanya terjadi dengan huruf ba (ب). Dengung (ghunnah) harus dibaca dengan jelas dari rongga hidung, bukan dari mulut. Panjang dengung adalah 2 harakat.</div>
+            <?php elseif (isset($tajwid['slug']) && $tajwid['slug'] === 'ikhfa'): ?>
+                <div class="tajwid-title">Ikhfa</div>
+                <div class="tajwid-desc">Ikhfa adalah hukum tajwid yang berarti "menyembunyikan" atau "samar-samar". Ikhfa terjadi ketika nun sukun (نْ) atau tanwin (ــًــٍــٌ) bertemu dengan huruf-huruf ikhfa. Dalam hal ini, nun sukun atau tanwin dibaca samar-samar antara nun dan mim dengan dengung (ghunnah).</div>
+                <div class="section-title">Huruf Ikhfa</div>
+                <ul class="mad-list">
+                    <li>ت (Ta)</li>
+                    <li>ث (Tsa)</li>
+                    <li>ج (Jim)</li>
+                    <li>د (Dal)</li>
+                    <li>ذ (Dzal)</li>
+                    <li>ز (Za)</li>
+                    <li>س (Sin)</li>
+                    <li>ش (Syin)</li>
+                    <li>ص (Shad)</li>
+                    <li>ض (Dhad)</li>
+                    <li>ط (Tha)</li>
+                    <li>ظ (Zha)</li>
+                    <li>ف (Fa)</li>
+                    <li>ق (Qaf)</li>
+                    <li>ك (Kaf)</li>
+                </ul>
+                <div class="section-title">Cara Membaca Ikhfa</div>
+                <ul class="mad-list">
+                    <li>Nun sukun (نْ) atau tanwin dibaca samar-samar antara nun dan mim</li>
+                    <li>Dibaca dengan dengung (ghunnah) selama 2 harakat</li>
+                    <li>Bunyi harus keluar dari rongga hidung</li>
+                    <li>Tidak boleh dibaca jelas seperti nun atau mim</li>
+                    <li>Harus ada kesamaran dalam pengucapan</li>
+                </ul>
+                <div class="section-title">Contoh Bacaan Ikhfa</div>
+                <ul class="mad-list">
+                    <li>مِنْ فَضْلِهِ → dibaca "mim-fadlihi" (nun dibaca samar dengan dengung)</li>
+                    <li>سَمِيعٌ قَرِيبٌ → dibaca "sami'un-qariib" (tanwin dibaca samar dengan dengung)</li>
+                    <li>مِنْ كُلِّ شَيْءٍ → dibaca "mim-kulli syai-in" (nun dibaca samar)</li>
+                    <li>عَلِيمٌ ذُو الطَّوْلِ → dibaca "aliimun-dzut-thawli" (tanwin dibaca samar)</li>
+                </ul>
+                <div class="section-title">Catatan</div>
+                <div class="example-box">Ikhfa harus dibaca dengan samar-samar, tidak boleh jelas seperti nun atau mim. Dengung (ghunnah) harus keluar dari rongga hidung selama 2 harakat. Kesamaran adalah ciri khas dari ikhfa.</div>
             <?php endif; ?>
             <a href="<?php echo site_url('tajwid'); ?>" class="back-btn">Kembali ke Daftar Tajwid</a>
         </div>
