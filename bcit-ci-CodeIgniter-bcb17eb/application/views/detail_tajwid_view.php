@@ -4,98 +4,247 @@
     <title><?php echo $title; ?></title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #f3e8ff 0%, #a78bfa 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ffecd2 50%, #fcb69f 75%, #ffecd2 100%);
             margin: 0;
             min-height: 100vh;
+            animation: gradientShift 8s ease-in-out infinite;
         }
+        
+        @keyframes gradientShift {
+            0%, 100% { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ffecd2 50%, #fcb69f 75%, #ffecd2 100%); }
+            25% { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 25%, #a8edea 50%, #fed6e3 75%, #a8edea 100%); }
+            50% { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ffecd2 50%, #fcb69f 75%, #ffecd2 100%); }
+            75% { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 25%, #a8edea 50%, #fed6e3 75%, #a8edea 100%); }
+        }
+        
         .header {
-            background: linear-gradient(90deg, #a259ff 60%, #6ee7b7 100%);
+            background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
             color: #fff;
             padding: 32px 0 24px 0;
             text-align: center;
             font-size: 2.2em;
             letter-spacing: 1px;
             font-weight: bold;
-            box-shadow: 0 2px 12px #a78bfa44;
+            box-shadow: 0 4px 20px rgba(255, 154, 158, 0.3);
+            position: relative;
+            overflow: hidden;
         }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
         .container {
             width: 96%;
             margin: 36px auto 0 auto;
             max-width: 800px;
         }
+        
         .card {
-            background: #fff;
-            border-radius: 22px;
-            box-shadow: 0 8px 32px rgba(162,89,255,0.10);
+            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(255, 154, 158, 0.15);
             padding: 44px 36px 36px 36px;
             text-align: left;
-            border: 3px solid #fff;
+            border: 3px solid transparent;
             margin-top: 36px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff9a9e, #fecfef, #a8edea, #fed6e3);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 154, 158, 0.25);
+            border-color: #ff9a9e;
+        }
+        
         .tajwid-title {
-            font-size: 2em;
-            color: #a259ff;
+            font-size: 2.2em;
+            color: #ff6b9d;
             font-weight: bold;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             text-align: center;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #a8edea, #fed6e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
         }
+        
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.1); }
+        }
+        
         .tajwid-desc {
-            color: #555;
+            color: #666;
             font-size: 1.15em;
             margin-bottom: 28px;
             text-align: center;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #fff 0%, #fef7ff 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9a9e;
         }
+        
         .section-title {
-            color: #a259ff;
-            font-size: 1.2em;
+            color: #ff6b9d;
+            font-size: 1.3em;
             font-weight: bold;
             margin-top: 28px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, #ff9a9e, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        
         .mad-list {
             margin-left: 18px;
             margin-bottom: 18px;
         }
+        
         .mad-list li {
-            margin-bottom: 8px;
-            font-size: 1.08em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #555;
+            padding: 8px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
+        
+        .mad-list li:hover {
+            background: linear-gradient(90deg, rgba(255, 154, 158, 0.1), rgba(254, 207, 239, 0.1));
+            padding-left: 10px;
+            transform: translateX(5px);
+        }
+        
         .example-box {
-            background: #f3e8ff;
-            border-left: 5px solid #a259ff;
-            border-radius: 10px;
-            padding: 16px 22px;
+            background: linear-gradient(135deg, #fff5f5 0%, #fef7ff 100%);
+            border-left: 5px solid #ff9a9e;
+            border-radius: 15px;
+            padding: 18px 25px;
             margin: 18px 0 28px 0;
             color: #333;
-            font-size: 1.08em;
+            font-size: 1.1em;
+            line-height: 1.5;
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.1);
+            transition: all 0.3s ease;
         }
+        
+        .example-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 154, 158, 0.2);
+        }
+        
         .back-btn {
-            background: linear-gradient(90deg, #a259ff 60%, #6ee7b7 100%);
+            background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%);
             color: #fff;
             border: none;
-            border-radius: 10px;
-            padding: 14px 32px;
+            border-radius: 20px;
+            padding: 16px 36px;
             font-weight: bold;
-            font-size: 1.08em;
+            font-size: 1.1em;
             cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            box-shadow: 0 2px 8px #a78bfa33;
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
             display: block;
             margin: 0 auto;
             text-align: center;
             width: max-content;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .back-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .back-btn:hover::before {
+            left: 100%;
+        }
+        
         .back-btn:hover {
-            background: linear-gradient(90deg, #6ee7b7 0%, #a259ff 100%);
-            transform: scale(1.04);
+            background: linear-gradient(90deg, #fecfef 0%, #ff9a9e 100%);
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+        }
+        
+        /* Floating elements for extra cuteness */
+        .floating-element {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            border-radius: 50%;
+            animation: floatAround 10s linear infinite;
+            opacity: 0.6;
+            z-index: -1;
+        }
+        
+        .floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+        .floating-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; }
+        .floating-element:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 6s; }
+        
+        @keyframes floatAround {
+            0% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(0px) rotate(180deg); }
+            75% { transform: translateY(20px) rotate(270deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">Detail Materi Tajwid</div>
+    <!-- Floating cute elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <div class="header">🌸 Detail Materi Tajwid 🌸</div>
     <div class="container">
         <div class="card">
             <?php if (isset($tajwid['slug']) && $tajwid['slug'] === 'mad'): ?>
